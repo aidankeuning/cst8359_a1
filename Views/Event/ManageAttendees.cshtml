@@ -1,0 +1,38 @@
+﻿@model CST8359_Assignment1.Models.Event
+@{
+}
+
+<h2>Manage Attendees: @Model.Title</h2>
+
+<form asp-action="Signup" method="post">
+
+    <input type="hidden"
+           name="eventId"
+           value="@Model.Id" />
+
+    <div>
+        <label>Name</label>
+        <input name="name" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input name="email" />
+    </div>
+
+    <button type="submit">
+        Sign Up
+    </button>
+
+</form>
+
+<h3>Current Attendees (@Model?.Attendees?.Count)</h3>
+
+<ul>
+    @foreach (var attendee in Model.Attendees)
+    {
+        <li>
+            @attendee.Name (@attendee.Email)
+        </li>
+    }
+</ul>

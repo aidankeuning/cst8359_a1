@@ -1,5 +1,6 @@
 ﻿using CST8359_Assignment1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace CST8359_Assignment1.Controllers
 {
@@ -34,6 +35,24 @@ namespace CST8359_Assignment1.Controllers
         {
             var ev = events?.FirstOrDefault(e => e.Id == id);
             return View(ev);
+        }
+
+        [HttpPost]
+        public IActionResult SignUp(int eventId, string name, string email)
+        {
+            var ev = events.FirstOrDefault(e => e.Id == eventId);
+
+            if (ev != null)
+            {
+                ev.Attendees.Add(new Attendee()
+                {
+                    Name = name,
+                    Email = email
+                });
+            }
+            return RedirectToAction(
+                "ManageAttendees",
+                new {id = eventId});
         }
     }
 }
