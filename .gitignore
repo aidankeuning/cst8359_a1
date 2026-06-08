@@ -1,1 +1,4 @@
-wwwroot/css wwwroot/favicon.ico wwwroot/js wwwroot/lib
+.vs/*
+wwwroot/*
+bin/*
+obj/*

@@ -1,0 +1,30 @@
+﻿@model List<CST8359_Assignment1.Models.Event>
+@{
+	
+}
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Date</th>
+		<th>Location</th>
+		<th></th>
+	</tr>
+
+	@foreach(var ev in Model)
+	{
+		<tr>
+			<td>@ev.Title</td>
+			<td>@ev.Date.ToShortDateString()</td>
+			<td>@ev.Location</td>
+			<td>
+				<a asp-action="Manage Attendees"
+				asp-route-id="@ev.Id"
+				class="btn btn-primary">
+				Manage Attendees
+				</a>
+			</td>
+		</tr>
+
+	}
+</table>

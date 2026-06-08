@@ -31,3 +31,4 @@ C:\Users\aidan\Documents\2026S\dotnet\labs\CST8359_Assignment1\obj\Debug\net8.0\
 C:\Users\aidan\Documents\2026S\dotnet\labs\CST8359_Assignment1\obj\Debug\net8.0\CST8359_Assignment1.pdb
 C:\Users\aidan\Documents\2026S\dotnet\labs\CST8359_Assignment1\obj\Debug\net8.0\CST8359_Assignment1.genruntimeconfig.cache
 C:\Users\aidan\Documents\2026S\dotnet\labs\CST8359_Assignment1\obj\Debug\net8.0\ref\CST8359_Assignment1.dll
+C:\Users\aidan\Documents\2026S\dotnet\labs\CST8359_Assignment1\obj\Debug\net8.0\CST8359_Assignment1.sourcelink.json
